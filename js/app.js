@@ -18,7 +18,7 @@ var calculadora = {
 
         function evento(e) {
             valorClick = e.target.id;
-            var clase = e.srcElement.className;
+            var clase = e.target.className;
             var elemento = document.getElementById(valorClick);
             var display = document.getElementById('display');
             valorDisplay = document.getElementById('display').innerHTML;
@@ -26,7 +26,6 @@ var calculadora = {
             if (clase.includes("tecla") && valorClick != null && valorClick != "" && teclaIgual == false) {
                 var inicio = setTimeout(ini, 30);
                 var reini;
-
                 function ini() {
                     elemento.style.transform = "scale(0.95,0.95)";
                     clearTimeout(inicio);
